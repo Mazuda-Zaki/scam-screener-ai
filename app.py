@@ -28,7 +28,7 @@ if st.button("Analyze Threat"):
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Screenshot", use_container_width=True)
         
-        # --- NEW: Added line 5 to force the AI to extract URLs from the image ---
+        # --- Prompt ---
         prompt = """
         Act as a cybersecurity expert. Read the text inside this image and tell me if it is a scam.
         Format your response exactly like this:
@@ -45,7 +45,7 @@ if st.button("Analyze Threat"):
     elif user_text:
         st.info("Analyzing text... please wait.")
         
-        # --- NEW: Added line 5 here too for consistency ---
+        # --- Prompt ---
         prompt = f"""
         Act as a cybersecurity expert. Analyze the following text and tell me if it is a scam.
         Format your response exactly like this:
@@ -81,11 +81,11 @@ if st.button("Analyze Threat"):
         # ==========================================
         # VIRUSTOTAL URL CHECKING LOGIC
         # ==========================================
-        # --- NEW: We now search for links inside the user's text AND the AI's response ---
+        # --- Search for links inside the user's text AND the AI's response ---
         text_to_search = str(user_text) + " " + ai_response_text
         urls_found = re.findall(r'(https?://[^\s]+)', text_to_search)
         
-        # We also want to clean up any weird punctuation the AI might have added to the end of the URL
+        # Clean up any weird punctuation the AI might have added to the end of the URL
         clean_urls = [url.rstrip(").,!'\"") for url in urls_found]
 
         if clean_urls:
