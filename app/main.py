@@ -5,8 +5,8 @@ from google.genai import types
 import time
 
 # Import our custom modules (Separation of Concerns)
-from ai_engine import get_gemini_client, extract_robust_json, JSON_PROMPT
-from ui_components import (
+from app.ai_engine import get_gemini_client, extract_robust_json, JSON_PROMPT
+from app.ui_components import (
     init_session_state, reset_analysis, hard_clear_data, 
     welcome_modal, privacy_modal, render_metrics_and_flags, 
     render_chat_advisor, render_report_generator
