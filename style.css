@@ -1,7 +1,7 @@
 /* Hide Streamlit Default Elements */
 #MainMenu {visibility: hidden;} 
 footer {visibility: hidden;} 
-header {visibility: hidden;}
+.stAppDeployButton {display: none;}
 
 /* App Background */
 .stApp {background-color: #F8F9FA;} 
