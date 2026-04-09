@@ -50,7 +50,7 @@ By eliminating the complexity of report preparation, users are provided with a r
 * **Threat Intelligence Integration:** VirusTotal API v3  
 * **Image Processing:** Pillow (PIL)  
 
-*(Refer to `flowchart.md` for detailed system architecture and workflow design.)*
+*(Refer to `docs/flowchart.md` for detailed system architecture and workflow design.)*
 
 ---
 
@@ -66,7 +66,7 @@ Ensure that the following software is installed on your system:
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/scam-screener-ai.git
+git clone https://github.com/mazuda-zaki/scam-screener-ai.git
 cd scam-screener-ai
 ```
 
@@ -103,9 +103,9 @@ pip install -r requirements.txt
 This application requires API keys for **Google Gemini** and **VirusTotal**.
 
 #### Steps:
-1. Create a folder named:
-```
-.streamlit
+1. In the **root folder** of the project, create a new folder named:
+```bash
+mkdir .streamlit
 ```
 
 2. Inside the folder, create a file named:
@@ -132,7 +132,7 @@ Ensure that `.streamlit/` or `.streamlit/secrets.toml` is included in your `.git
 After completing the setup, execute the following command:
 
 ```bash
-streamlit run app.py
+streamlit run app/main.py
 ```
 
 The application will automatically launch in your default web browser at:  
@@ -142,14 +142,22 @@ The application will automatically launch in your default web browser at:
 
 ## 📂 File Structure
 
-- `app.py`  
-  Main entry point responsible for routing, tab management, and overall application state.
-
-- `ai_engine.py`  
-  Contains backend logic, including prompt engineering, JSON parsing, and error-handling mechanisms.
-
-- `ui_components.py`  
-  Handles user interface rendering, including dashboards, modals, chat features, and report generation.
-
-- `style.css`  
-  Defines custom styling for the frontend interface.
+```text
+scam-screener-ai/
+│
+├── app/                      # Core Application Logic
+│   ├── main.py               # Main Entry Point
+│   ├── ai_engine.py          # AI Prompting & Backend APIs
+│   └── ui_components.py      # UI Rendering & Modals
+│
+├── assets/                   # Static Media & Styling
+│   └── styles/
+│       └── style.css         # Custom UI Styling
+│
+├── docs/                     # Documentation
+│   └── flowchart.md          # System Architecture
+│
+├── .gitignore                # Security Rules
+├── README.md                 # Project Documentation
+└── requirements.txt          # Python Dependencies
+```
