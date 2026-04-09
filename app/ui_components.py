@@ -1,7 +1,7 @@
 import streamlit as st
 import uuid
 import urllib.parse
-from ai_engine import check_virustotal, get_gemini_client
+from app.ai_engine import check_virustotal, get_gemini_client
 
 # ==========================================
 # 1. STATE MANAGEMENT
