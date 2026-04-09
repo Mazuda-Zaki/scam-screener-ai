@@ -42,6 +42,8 @@ with st.sidebar:
     st.write("---")
     if st.button("🗑️ Clear Session Data", type="primary", use_container_width=True):
         hard_clear_data()
+        st.toast("Session data successfully wiped! 🧹", icon="✅") 
+        time.sleep(0.5) # Gives the user half a second to read the alert before the screen resets
         st.rerun()
 
 # ==========================================
