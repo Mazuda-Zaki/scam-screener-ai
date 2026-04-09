@@ -1,5 +1,9 @@
 # 🛡️ Scam Screener AI  
 **The Digital X-Ray for Suspicious Communications**
+![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-Flash%202.5-4285F4?logo=google&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Scam Screener AI is a proactive, zero-trust threat analysis web application designed to assist users in identifying and mitigating potential cyber threats. The system functions as an on-demand cybersecurity analysis tool, enabling users to safely upload suspicious screenshots or text messages to detect psychological manipulation techniques and malicious links *before* any harm occurs.
 
