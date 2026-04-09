@@ -15,7 +15,7 @@ from ui_components import (
 # ==========================================
 # 1. INITIALIZATION & CONFIG
 # ==========================================
-st.set_page_config(page_title="Scam Screener AI", page_icon="🛡️", layout="centered", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Scam Screener AI", page_icon="🛡️", layout="centered", initial_sidebar_state="expanded")
 
 def load_css(file_name):
     if os.path.exists(file_name):
