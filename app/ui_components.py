@@ -14,7 +14,7 @@ def init_session_state():
         "original_threat": "", 
         "first_visit": True,
         "widget_key": str(uuid.uuid4()),
-        "active_analysis_type": None # <--- THIS FIXES THE TAB BLEEDING BUG
+        "active_analysis_type": None 
     }
     for key, val in defaults.items():
         if key not in st.session_state:
