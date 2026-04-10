@@ -91,6 +91,44 @@ Users can directly send the report via their email client with minimal effort.
 ![Email Integration](assets/images/step5_email.png)
 
 ---
+## ⚙️ System Architecture Data Flow
+
+```mermaid
+graph TD
+    %% Define Styles
+    classDef frontend fill:#dbeafe,stroke:#3b82f6,stroke-width:2px,color:#000;
+    classDef backend fill:#dcfce7,stroke:#22c55e,stroke-width:2px,color:#000;
+    classDef engineA fill:#f3e8ff,stroke:#a855f7,stroke-width:2px,color:#000;
+    classDef engineB fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#000;
+    classDef output fill:#fef08a,stroke:#eab308,stroke-width:2px,color:#000;
+
+    %% Define Nodes
+    A["📥 1. The Client <br>(Streamlit UI)"]:::frontend
+    B["⚙️ 2. The Core Backend<br>(Python 3.9+ Hub)"]:::backend
+    C["🧠 3. Engine A (The Brain)<br>(Gemini 2.5 Flash API)"]:::engineA
+    D["🛡️ 4. Engine B (Threat Intel)<br>(VirusTotal API v3)"]:::engineB
+    
+    subgraph Output_Layer ["🚀 5. Action Output (The Resolution)"]
+        direction LR
+        E1["📊 Threat Dashboard"]:::output
+        E2["💬 Context-Aware Chat"]:::output
+        E3["📧 Incident Report Payload"]:::output
+    end
+
+    %% Define Flows (Arrows)
+    A -- "Uploads Visual/Text Payload" --> B
+    
+    B -- "Sends Image/Text for Analysis" --> C
+    C -- "Returns OCR, Psych Analysis, Chat Logic" --> B
+    
+    B -- "Sends Extracted URLs for Scanning" --> D
+    D -- "Returns Sandbox Safety Results" --> B
+    
+    B -- "Renders Dashboard & Aggregated Data" --> E1
+    B -- "Initializes Communication Loop" --> E2
+    B -- "Generates mailto: Link" --> E3
+```
+---
 
 ## 🛠️ Tech Stack
 
