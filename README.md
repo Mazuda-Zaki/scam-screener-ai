@@ -120,11 +120,17 @@ cd scam-screener-ai
 
 ```bash
 python -m venv venv
+```
 
-# Windows
+Activate the environment:
+
+**Windows:**
+```bash
 venv\Scripts\activate
+```
 
-# macOS/Linux
+**macOS/Linux:**
+```bash
 source venv/bin/activate
 ```
 
@@ -195,9 +201,10 @@ The system was evaluated using real-world scam scenarios to ensure reliability a
 
 ## 🔮 Future Work
 
-* 🌐 **Multilingual scam detection support**
-* 🧩 **Browser extension for real-time email scanning**
-* 💻 **On-device LLM integration for offline privacy**
+* 📱 **Messaging Bot Deployment:** Integrating the engine into WhatsApp and Telegram via API, allowing users to simply "forward" suspicious messages or images to a bot for frictionless, instant analysis.
+* 🎙️ **Deepfake Audio Analysis:** Expanding ingestion capabilities to analyze voice notes and detect synthetic speech or AI-generated voice cloning used in modern impersonation scams.
+* 🗣️ **Localized NLP Fine-Tuning:** While the base model is naturally multilingual, future iterations will be fine-tuned to specifically detect manipulation tactics hidden within regional slang, Manglish, and informal text abbreviations.
+* 🗺️ **Crowdsourced Threat Heatmap:** Aggregating anonymized diagnostic data to create a live, public dashboard tracking trending scam campaigns and active threat vectors in real-time.
 
 ---
 
