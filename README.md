@@ -91,6 +91,54 @@ Users can directly send the report via their email client with minimal effort.
 ![Email Integration](assets/images/step5_email.png)
 
 ---
+
+
+## 👥 Use Case Diagram
+
+*This diagram illustrates how the **Primary Actor (User)** interacts with the **System Boundary (Scam Screener AI)**. The system then communicates with **Secondary Actors (External APIs & Tools)** to complete the threat analysis and reporting loop.*
+
+```mermaid
+graph LR
+    %% Define Styles
+    classDef primaryActor fill:#dbeafe,stroke:#3b82f6,stroke-width:2px,rx:50,ry:50,color:#000;
+    classDef secondaryActor fill:#fce7f3,stroke:#db2777,stroke-width:2px,rx:50,ry:50,color:#000;
+    classDef usecase fill:#fff,stroke:#4b5563,stroke-width:2px,rx:20,ry:20,color:#000;
+    classDef system stroke:#f59e0b,stroke-width:4px,fill:none;
+
+    %% Primary Actor (Left)
+    A1["👤 <br> Everyday User"]:::primaryActor
+
+    %% Secondary Actors (Right)
+    API1["🧠 <br> Google Gemini API<br>(External System)"]:::secondaryActor
+    API2["🛡️ <br> VirusTotal API<br>(External System)"]:::secondaryActor
+    APP1["📧 <br> Native Email Client<br>(External System)"]:::secondaryActor
+
+    %% System Boundary (Center)
+    subgraph System_Boundary ["🛡️ Scam Screener AI System"]
+        direction TB
+        U1["Review Security SOP"]:::usecase
+        U2["Submit Suspicious Evidence <br> (Text or Image)"]:::usecase
+        U3["Generate Threat Analysis <br> & Confidence Score"]:::usecase
+        U4["Consult AI Security Advisor"]:::usecase
+        U5["Draft Authority <br> Incident Report"]:::usecase
+        U6["Clear Session Memory <br> (Zero-Retention)"]:::usecase
+    end
+
+    %% Primary Actor Interactions (User -> System)
+    A1 -- "Reads" --> U1
+    A1 -- "Uploads" --> U2
+    A1 -- "Views" --> U3
+    A1 -- "Chats with" --> U4
+    A1 -- "Triggers" --> U5
+    A1 -- "Executes" --> U6
+
+    %% Secondary Actor Interactions (System -> External APIs)
+    U3 -. "Queries for OCR & <br> Psych Analysis" .-> API1
+    U3 -. "Queries for <br> URL Verification" .-> API2
+    U4 -. "Routes conversational <br> context" .-> API1
+    U5 -. "Passes payload to" .-> APP1
+```
+---
 ## ⚙️ System Architecture Data Flow
 
 ```mermaid
