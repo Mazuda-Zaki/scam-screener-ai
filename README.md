@@ -93,6 +93,8 @@ Users can directly send the report via their email client with minimal effort.
 ---
 
 
+---
+
 ## 👥 Use Case Diagram
 
 *This diagram illustrates how the **Primary Actor (User)** interacts with the **System Boundary (Scam Screener AI)**. The system then communicates with **Secondary Actors (External APIs & Tools)** to complete the threat analysis and reporting loop.*
@@ -116,16 +118,14 @@ graph LR
     %% System Boundary (Center)
     subgraph System_Boundary ["🛡️ Scam Screener AI System"]
         direction TB
-        U1["Review Security SOP"]:::usecase
         U2["Submit Suspicious Evidence <br> (Text or Image)"]:::usecase
-        U3["Generate Threat Analysis <br> & Confidence Score"]:::usecase
-        U4["Consult AI Security Advisor"]:::usecase
+        U3["Generate Threat Analysis"]:::usecase
+        U4["Consult AI Advisor"]:::usecase
         U5["Draft Authority <br> Incident Report"]:::usecase
         U6["Clear Session Memory <br> (Zero-Retention)"]:::usecase
     end
 
     %% Primary Actor Interactions (User -> System)
-    A1 -- "Reads" --> U1
     A1 -- "Uploads" --> U2
     A1 -- "Views" --> U3
     A1 -- "Chats with" --> U4
