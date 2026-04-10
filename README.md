@@ -17,12 +17,12 @@
 
 **Scam Screener AI** is a zero-trust threat analysis web application that helps users detect and respond to potential cyber scams in real time.
 
-Users can upload suspicious screenshots or paste text messages to identify:
-- Psychological manipulation techniques
-- Malicious or suspicious links
-- Scam patterns such as urgency, authority impersonation, and greed tactics
+Instead of just flagging a threat, the system provides a complete incident response workflow. Users can safely upload suspicious screenshots or paste text messages to:
+* **🔍 Detect Threats:** Instantly identify psychological manipulation tactics, authority impersonation, and malicious links via VirusTotal.
+* **🧠 Understand the Risk:** Chat with a built-in, Context-Aware AI Advisor to break the psychological spell and de-escalate panic.
+* **⚡ Take Action:** Automatically generate structured, evidence-backed incident reports ready to send to centralized national authorities.
 
-Unlike traditional detection tools, this system not only detects threats but also **guides users on what to do next — all within a single interface**.
+Unlike traditional detection tools, Scam Screener AI doesn't just leave users with a red warning screen — it **guides them on exactly what to do next, all within a single unified interface**.
 
 ---
 
