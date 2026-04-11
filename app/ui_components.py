@@ -52,11 +52,11 @@ def welcome_modal():
 @st.dialog("Data Privacy Policy 🔒")
 def privacy_modal():
     st.markdown("""
-    ###🔒 Your Privacy is Protected
+    ### 🔒 Your Privacy is Protected
+    We built this tool to keep you safe, which means keeping your data safe, too. 
     
-    * **No Data Logging:** We do not store, log, or persist user-uploaded evidence on our servers.
-    * **Volatile Memory Only:** Clicking "Clear Session" or closing the browser permanently destroys the session cache.
-    * **Encrypted Processing:** Payloads are transmitted via TLS encryption and are strictly excluded from public LLM training data.
+    * **We never save your files:** We do not store or keep any screenshots, messages, or emails you upload. 
+    * **Everything is wiped clean:** The moment you close this page or click "Clear Session," all your data is instantly and permanently erased.
     """)
     if st.button("Close"):
         st.rerun()
