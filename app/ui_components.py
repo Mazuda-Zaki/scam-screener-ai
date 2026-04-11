@@ -41,9 +41,9 @@ def welcome_modal():
     **Proactive Threat Interception & Analysis**
     
     **Standard Operating Procedure:**
-    1. **📥 Ingest Evidence:** Upload a screenshot or paste raw text from any unverified digital communication.
-    2. **🧠 Execute Scan:** Our zero-trust engine analyzes psychological manipulation vectors and cross-references URLs against global databases.
-    3. **🚨 Review & Act:** Consult the AI Security Advisor or generate a standardized incident report for authorities.
+    1. **📥 Submit Evidence: Upload a screenshot or paste suspicious text (e.g., SMS or email).
+    2. **🧠 Analyze Threat: The system evaluates scam indicators and verifies any embedded links.
+    3. **🚨 Review & Respond: View results, consult the AI advisor, or generate an incident report.
     """)
     if st.button("Acknowledge & Proceed 🚀", type="primary", use_container_width=True):
         st.session_state.first_visit = False
@@ -52,8 +52,7 @@ def welcome_modal():
 @st.dialog("Data Privacy Policy 🔒")
 def privacy_modal():
     st.markdown("""
-    ### Data Protection & Zero-Retention Policy
-    Strict adherence to user privacy and data security.
+    ###🔒 Your Privacy is Protected
     
     * **No Data Logging:** We do not store, log, or persist user-uploaded evidence on our servers.
     * **Volatile Memory Only:** Clicking "Clear Session" or closing the browser permanently destroys the session cache.
