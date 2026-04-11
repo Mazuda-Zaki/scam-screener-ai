@@ -41,9 +41,9 @@ def welcome_modal():
     **Proactive Threat Interception & Analysis**
     
     **Standard Operating Procedure:**
-    1. **📥 Submit Evidence: Upload a screenshot or paste suspicious text (e.g., SMS or email).
-    2. **🧠 Analyze Threat: The system evaluates scam indicators and verifies any embedded links.
-    3. **🚨 Review & Respond: View results, consult the AI advisor, or generate an incident report.
+    1. **📥 Submit Evidence:** Upload a screenshot or paste suspicious text (e.g., SMS or email).
+    2. **🧠 Analyze Threat:** The system evaluates scam indicators and verifies any embedded links.
+    3. **🚨 Review & Respond:** View results, consult the AI advisor, or generate an incident report.
     """)
     if st.button("Acknowledge & Proceed 🚀", type="primary", use_container_width=True):
         st.session_state.first_visit = False
