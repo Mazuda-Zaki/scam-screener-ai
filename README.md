@@ -180,10 +180,13 @@ graph TD
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Streamlit (Python)
-- **AI Engine:** Google Gemini 2.5 Flash
-- **Threat Intelligence:** VirusTotal API v3
-- **Image Processing:** Pillow (PIL)
+- **Frontend:** Streamlit (Python)  
+- **Backend:** Python 3.9+  
+- **AI Engine:** Google Gemini 2.5 Flash  
+- **Threat Intelligence Integration:** VirusTotal API v3  
+- **Image Processing:** Pillow (PIL)  
+
+*(Refer to `docs/flowchart.md` for detailed system architecture and workflow design.)*
 
 ---
 
