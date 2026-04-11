@@ -133,7 +133,7 @@ def render_chat_advisor():
             
         if submit_chat and user_question.strip():
             st.session_state.messages.append({"role": "user", "content": user_question})
-            chat_context = f"You are an objective cybersecurity advisor. Context: Threat Level: {data.get('threat_level')}. Summary: {data.get('incident_summary')}. User asks: '{user_question}'. Reply in 2-3 sentences. Be clear and highly actionable."
+            chat_context = f"You are a friendly, calming security advisor helping an everyday user who might be panicked. Context: Threat Level: {data.get('threat_level')}. Summary: {data.get('incident_summary')}. User asks: '{user_question}'. Rules: 1. Speak in simple, everyday English (Grade 6 reading level). 2. Keep your answers short (max 3 sentences). 3. Never use technical jargon (e.g., say 'stealing your password' instead of 'credential theft')."
             try:
                 chat_response = client.models.generate_content(model='gemini-2.5-flash', contents=chat_context)
                 reply = chat_response.text
