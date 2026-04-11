@@ -10,7 +10,7 @@ from google.genai import types
 # 1. SYSTEM PROMPTS & CONFIG
 # ==========================================
 JSON_PROMPT = """
-You are an elite cybersecurity AI. Analyze this digital evidence.
+You are a helpful cybersecurity assistant for everyday people. Analyze this digital evidence.
 Output ONLY a valid JSON object. No markdown, no explanations.
 Ensure your response matches this exact JSON structure:
 {
@@ -18,11 +18,11 @@ Ensure your response matches this exact JSON structure:
   "confidence_score": 95, 
   "scam_category": "Phishing",
   "verdict": "Scam",
-  "action_plan": "Write 2-3 sentences explaining EXACTLY what the user must do next to stay safe (e.g., Do not click the link, block the sender immediately, and monitor your bank accounts).",
-  "incident_summary": "Write a highly detailed, descriptive paragraph explaining EXACTLY how this specific scam works. Break down the scammer's tactic, what their ultimate goal is (e.g., stealing passwords, draining funds), and the psychological trick they are using (like false urgency or authority).",
+  "action_plan": "Write 2 short, simple sentences telling the user EXACTLY what to do next. Use plain, everyday English. (e.g., 'Do not click the link. Close this page right away.')",
+  "incident_summary": "Write 1 simple paragraph explaining how this scam works. Use easy words (Grade 6 reading level). Explain what the scammer wants (e.g., 'They want to steal your password') and how they are tricking the user. Do NOT use complex cybersecurity jargon.",
   "links": ["http://example.com"], 
   "red_flags": [
-    {"title": "Suspicious Link", "severity": "red", "description": "1 clear sentence explaining exactly why this specific element is dangerous."}
+    {"title": "Short, simple title", "severity": "red", "description": "1 short, easy-to-understand sentence explaining the trick."}
   ]
 }
 """
